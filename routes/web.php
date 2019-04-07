@@ -13,3 +13,7 @@
 
 Route::get('/', 'IndexController@index');
 Route::get('/contacts','IndexController@contacts');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
