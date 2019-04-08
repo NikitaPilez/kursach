@@ -44,9 +44,9 @@ URI     : https://colorlib.com
                         <div class="collapse navbar-collapse" id="navbar">
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item"> <a class="nav-link active" href="{{asset('/')}}">ГЛАВНАЯ <span class="sr-only">(current)</span></a> </li>
-                                <li class="nav-item"> <a class="nav-link" href="#features">ГАЛЕРЕЯ</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="{{asset('gallery')}}">ГАЛЕРЕЯ</a> </li>
                                 <li class="nav-item"> <a class="nav-link" href="#gallery">УСЛУГИ</a> </li>
-                                <li class="nav-item"> <a class="nav-link" href="#pricing">ВОПРОСЫ</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="{{asset('questions')}}">ВОПРОСЫ</a> </li>
                                 <li class="nav-item"> <a class="nav-link" href="{{asset('contacts')}}">КОНТАКТЫ</a> </li>
                             </ul>
                         </div>

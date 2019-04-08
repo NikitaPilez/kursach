@@ -13,4 +13,12 @@ class IndexController extends Controller
     public function contacts(){
     	return view('contacts');
     }
+
+    public function questions(){
+    	return view('questions');
+    }
+
+    public function gallery(){
+    	return view('gallery');
+    }
 }
