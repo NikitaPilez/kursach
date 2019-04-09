@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Question;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -15,7 +16,10 @@ class IndexController extends Controller
     }
 
     public function questions(){
-    	return view('questions');
+
+        $questions = Question::where('display','show')->get();
+
+    	return view('questions',compact('questions'));
     }
 
     public function gallery(){
