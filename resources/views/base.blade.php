@@ -21,6 +21,9 @@ URI     : https://colorlib.com
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
 
+    
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Themify Icons -->
@@ -29,6 +32,8 @@ URI     : https://colorlib.com
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <!-- Main css -->
     <link href="css/style.css" rel="stylesheet">
+    <!-- <link href="css/util.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet"> -->
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="30">
@@ -83,12 +88,16 @@ URI     : https://colorlib.com
         </small>
     </footer>
 
+ 
+
     <!-- jQuery and Bootstrap -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <!-- Plugins JS -->
     <script src="js/owl.carousel.min.js"></script>
     <!-- Custom JS -->
+    <script src="js/script.js"></script>
+
     <script src="js/script.js"></script>
 
 </body>

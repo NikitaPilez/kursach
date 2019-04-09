@@ -25,4 +25,10 @@ class IndexController extends Controller
     public function gallery(){
     	return view('gallery');
     }
+
+    public function sendQuestion(){
+        
+        
+        return redirect('questions');
+    }
 }

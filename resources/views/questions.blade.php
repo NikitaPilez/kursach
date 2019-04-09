@@ -14,5 +14,45 @@
                 </div> 
                  @endforeach
             </div>
+            <a data-toggle="modal" data-target="#modalQuestion">Вызвать модальное окно</a>
         </div>
+
+           <div class="modal fade" id="modalQuestion" tabindex="-1" role="dialog"
+     aria-hidden="true">
+    <div class="modal-dialog " role="document">
+        <div class="modal-content">
+            <div class="wrap-login100">
+                <form class="login100-form validate-form" method="POST" action="{{asset('/sendQuestion')}}">
+                    {{csrf_field()}}
+                    <span class="login100-form-title p-b-26">
+                        Задайте свой вопрос
+                    </span>
+
+                    <div class="wrap-input100 validate-input">
+                        <input class="input100" type="text" name="question">
+                        <span class="focus-input100" data-placeholder="Question"></span>
+                    </div>
+
+                    <!-- <div class="wrap-input100 validate-input" data-validate="Enter password">
+                        <span class="btn-show-pass">
+                            <i class="zmdi zmdi-eye"></i>
+                        </span>
+                        <input class="input100" type="password" name="pass">
+                        <span class="focus-input100" data-placeholder="Password"></span>
+                    </div> -->
+
+                    <div class="container-login100-form-btn">
+                        <div class="wrap-login100-form-btn">
+                            <div class="login100-form-bgbtn"></div>
+                            <button class="login100-form-btn">
+                                Отправить
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
 @endsection
