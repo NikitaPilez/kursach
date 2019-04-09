@@ -11,6 +11,7 @@
                 <div class="col-md-6">
                     <h4 class="mb-3">{{$item->question}}</h4>
                     <p class="light-font mb-5">{{$item->answer}} </p>
+                    <p class="light-font mb-5">{{$item->date}} </p>
                 </div> 
                  @endforeach
             </div>
