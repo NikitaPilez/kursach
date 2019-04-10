@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Carbon\Carbon;
 use App\Question;
+use App\Setting;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -13,7 +14,11 @@ class IndexController extends Controller
     }
 
     public function contacts(){
-    	return view('contacts');
+
+    
+    	$contacts = Setting::where('id','1')->first();
+
+    	return view('contacts',compact('contacts'));
     }
 
     public function questions(){
