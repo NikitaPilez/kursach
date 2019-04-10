@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Question;
 use Illuminate\Http\Request;
 
@@ -26,21 +27,14 @@ class IndexController extends Controller
     	return view('gallery');
     }
 
-    public function sendQuestion(){ 
-        /**
-        1. create new object
-        2. set properties question
-        3. set properties date
-            a) get now date
-            b) format with Carbon. 09.04.2019 17:53
-            c) $date = .. 
-                dd($date);
-        **/
+    public function sendQuestion(Request $request){ 
 
+    	$question = new Question;
+    	$question->question = $request ->question;
+    	$question->date = Carbon::parse($date) ->format('d.m.Y H:m');
+    	$question->display =  "hide";
 
-       // new task create and save object as result - showing in database new entry
-       // required date and question 
-       // how to create date and format - check Carbon PHP.
+    	$question ->save();
 
         return redirect('questions');
     }

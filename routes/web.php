@@ -19,3 +19,10 @@ Route::post('sendQuestion','IndexController@sendQuestion');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+/*
+add contacts 
+add model contacts
+
+modal window questions
+*/
