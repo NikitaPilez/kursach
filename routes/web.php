@@ -21,8 +21,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 /*
-add contacts 
-add model contacts
 
-modal window questions
+https://laravel.ru/docs/v5/queries
+
+	id = 1; only fisrt entry; 
+ 	a)Edit 
+ 	
+ 	email,phone,address,
+ 	header,title,subtitle,copyright.
 */
