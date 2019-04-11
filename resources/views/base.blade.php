@@ -82,7 +82,7 @@ URI     : https://colorlib.com
         <p class="mb-2"><small>{{$contacts->copyright}} <a href="https://colorlib.com">COLORLIB</a></small></p>
 
         <small>
-            <a href="#" class="m-2">PRESS</a>
+            <a id="test" href="#" class="m-2">PRESS</a>
             <a href="#" class="m-2">TERMS</a>
             <a href="#" class="m-2">PRIVACY</a>
         </small>
@@ -99,6 +99,12 @@ URI     : https://colorlib.com
     <script src="js/script.js"></script>
 
     <script src="js/script.js"></script>
+
+    <script type="text/javascript">
+        $('#test').click(function(){
+            console.log('dfdddfdfdf');
+        });
+    </script>
 
 </body>
 
