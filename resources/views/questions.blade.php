@@ -34,13 +34,13 @@
                         <span class="focus-input100" data-placeholder="Question"></span>
                     </div>
 
-                    <!-- <div class="wrap-input100 validate-input" data-validate="Enter password">
+                    <<div class="wrap-input100 validate-input" method="POST" action="{{asset('/sendQuestion')}}">
                         <span class="btn-show-pass">
                             <i class="zmdi zmdi-eye"></i>
                         </span>
-                        <input class="input100" type="password" name="pass">
-                        <span class="focus-input100" data-placeholder="Password"></span>
-                    </div> -->
+                        <input class="input100" type="text" name="comment">
+                        <span class="focus-input100" data-placeholder="Comment"></span>
+                    </div> 
 
                     <div class="container-login100-form-btn">
                         <div class="wrap-login100-form-btn">

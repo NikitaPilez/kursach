@@ -25,10 +25,11 @@ class IndexController extends Controller
     }
 
     public function questions(){
+    	$contacts = Setting::where('id','1')->first();
 
         $questions = Question::where('display','show')->get();
 
-    	return view('questions',compact('questions'));
+    	return view('questions',compact('questions', 'contacts'));
     }
 
     public function gallery(){
@@ -39,11 +40,16 @@ class IndexController extends Controller
 
     	$question = new Question;
     	$question->question = $request ->question;
+    	$date = Carbon::now();
     	$question->date = Carbon::parse($date) ->format('d.m.Y H:m');
     	$question->display =  "hide";
-
+    	$question ->comment = $request ->comment;
+    
     	$question ->save();
 
         return redirect('questions');
     }
+
+
+
 }

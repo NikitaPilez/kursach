@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'IndexController@index');
-//Route::get('/base', 'IndexController@index');
+Route::get('/base', 'IndexController@index');
 Route::get('/contacts','IndexController@contacts');
 Route::get('/gallery' ,'IndexController@gallery');
 Route::get('/questions' , 'IndexController@questions');
