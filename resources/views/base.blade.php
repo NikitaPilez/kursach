@@ -10,7 +10,7 @@ URI     : https://colorlib.com
  -->
 
 <head>
-    <title>MobApp - App Landing Page Template</title>
+    <title>{{$contacts->title}}</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -64,8 +64,8 @@ URI     : https://colorlib.com
 
     <header class="bg-gradient" id="home">
         <div class="container mt-5">
-            <h1>Mobile App Landing Page Template</h1>
-            <p class="tagline">The one and only solution for any kind of mobila app landing needs. Just change the screenshots and texts and you are good to go. </p>
+            <h1>{{$contacts->header}}</h1>
+            <p class="tagline">{{$contacts->subtitle}}</p>
         </div>
         <div class="img-holder mt-3"><img src="images/iphonex.png" alt="phone" class="img-fluid"></div>
     </header>
@@ -79,7 +79,7 @@ URI     : https://colorlib.com
     @yield('content')
 
     <footer class="my-5 text-center">
-        <p class="mb-2"><small>COPYRIGHT © 2017. ALL RIGHTS RESERVED. MOBAPP TEMPLATE BY <a href="https://colorlib.com">COLORLIB</a></small></p>
+        <p class="mb-2"><small>{{$contacts->copyright}} <a href="https://colorlib.com">COLORLIB</a></small></p>
 
         <small>
             <a href="#" class="m-2">PRESS</a>

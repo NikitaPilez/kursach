@@ -10,7 +10,10 @@ use Illuminate\Http\Request;
 class IndexController extends Controller
 {
     public function index(){
-    	return view('base');
+
+    	$contacts = Setting::where('id','1')->first();
+
+    	return view('base',compact('contacts'));
     }
 
     public function contacts(){
