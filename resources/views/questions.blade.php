@@ -34,7 +34,7 @@
                         <span class="focus-input100" data-placeholder="Question"></span>
                     </div>
 
-                    <<div class="wrap-input100 validate-input" method="POST" action="{{asset('/sendQuestion')}}">
+                    <<div class="wrap-input100 validate-input">
                         <span class="btn-show-pass">
                             <i class="zmdi zmdi-eye"></i>
                         </span>
