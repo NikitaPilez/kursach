@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'IndexController@index');
+Route::get('services','IndexController@services');
 Route::get('/contacts','IndexController@contacts');
 Route::get('/gallery' ,'IndexController@gallery');
 Route::get('/questions' , 'IndexController@questions');

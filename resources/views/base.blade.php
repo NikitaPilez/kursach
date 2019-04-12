@@ -10,7 +10,7 @@ URI     : https://colorlib.com
  -->
 
 <head>
-    <title>{{$contacts->title}}</title>
+    <title>{{$settings->title}}</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -32,8 +32,8 @@ URI     : https://colorlib.com
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <!-- Main css -->
     <link href="css/style.css" rel="stylesheet">
-    <!-- <link href="css/util.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet"> -->
+    <link href="css/util.css" rel="stylesheet">
+        
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="30">
@@ -48,9 +48,8 @@ URI     : https://colorlib.com
                         <a class="navbar-brand" href="{{asset('/')}}"><img src="images/logo.png" class="img-fluid" alt="logo"></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
                         <div class="collapse navbar-collapse" id="navbar">
                             <ul class="navbar-nav ml-auto">
-                                <li class="nav-item"> <a class="nav-link active" href="{{asset('/')}}">ГЛАВНАЯ <span class="sr-only">(current)</span></a> </li>
-                                <li class="nav-item"> <a class="nav-link" href="{{asset('gallery')}}">ГАЛЕРЕЯ</a> </li>
-                                <li class="nav-item"> <a class="nav-link" href="#gallery">УСЛУГИ</a> </li>
+                                <li class="nav-item"> <a class="nav-link active" href="{{asset('gallery')}}">ГАЛЕРЕЯ <span class="sr-only">(current)</span></a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="{{asset('services')}}">УСЛУГИ</a> </li>
                                 <li class="nav-item"> <a class="nav-link" href="{{asset('questions')}}">ВОПРОСЫ</a> </li>
                                 <li class="nav-item"> <a class="nav-link" href="{{asset('contacts')}}">КОНТАКТЫ</a> </li>
                             </ul>
@@ -64,8 +63,8 @@ URI     : https://colorlib.com
 
     <header class="bg-gradient" id="home">
         <div class="container mt-5">
-            <h1>{{$contacts->header}}</h1>
-            <p class="tagline">{{$contacts->subtitle}}</p>
+            <h1>{{$settings->header}}</h1>
+            <p class="tagline">{{$settings->subtitle}}</p>
         </div>
         <div class="img-holder mt-3"><img src="images/iphonex.png" alt="phone" class="img-fluid"></div>
     </header>
@@ -79,7 +78,7 @@ URI     : https://colorlib.com
     @yield('content')
 
     <footer class="my-5 text-center">
-        <p class="mb-2"><small>{{$contacts->copyright}} <a href="https://colorlib.com">COLORLIB</a></small></p>
+        <p class="mb-2"><small>{{$settings->copyright}} <a href="https://colorlib.com">COLORLIB</a></small></p>
 
         <small>
             <a id="test" href="#" class="m-2">PRESS</a>

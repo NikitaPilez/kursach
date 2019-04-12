@@ -11,29 +11,37 @@ class IndexController extends Controller
 {
     public function index(){
 
-    	$contacts = Setting::where('id','1')->first();
+    	$settings = Setting::where('id','1')->first();
 
-    	return view('base',compact('contacts'));
+    	return view('welcome',compact('settings'));
+    }
+
+
+    public function services(){
+        $settings = Setting::where('id','1')->first();
+
+        return view('services',compact('settings'));
     }
 
     public function contacts(){
 
-    
-    	$contacts = Setting::where('id','1')->first();
+    	$settings = Setting::where('id','1')->first();
 
-    	return view('contacts',compact('contacts'));
+    	return view('contacts',compact('settings'));
     }
 
     public function questions(){
-    	$contacts = Setting::where('id','1')->first();
+    	$settings = Setting::where('id','1')->first();
 
         $questions = Question::where('display','show')->get();
 
-    	return view('questions',compact('questions', 'contacts'));
+    	return view('questions',compact('questions', 'settings'));
     }
 
     public function gallery(){
-    	return view('gallery');
+        $settings = Setting::where('id','1')->first();
+
+    	return view('gallery',compact('settings'));
     }
 
     public function sendQuestion(Request $request){ 
