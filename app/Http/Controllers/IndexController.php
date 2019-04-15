@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use App\Question;
 use App\Setting;
 use App\Services;
+use App\ ServiceName;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -23,7 +24,11 @@ class IndexController extends Controller
 
         $services = Services::where('display','show')->get();
 
-        return view('services',compact('services','settings'));
+        $servicesname =  ServiceName::where('display','show')->get();
+
+
+
+        return view('services',compact('servicesname','services','settings'));
     }
 
     public function contacts(){

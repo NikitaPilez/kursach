@@ -15,11 +15,12 @@
                         <span class="price">{{$item->price}}<sub>/m</sub></span>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <div class="list-group-item">10 Projects</div>
-                        <div class="list-group-item">5 GB Storage</div>
-                        <div class="list-group-item">Basic Support</div>
-                        <div class="list-group-item"><del>Collaboration</del></div>
-                        <div class="list-group-item"><del>Reports and analytics</del></div>
+                        @foreach($servicesname as $object)
+                        @if ($item->id === $object->services_id)
+                        <div class="list-group-item">{{$object->name}}</div>
+                        @endif
+                        @endforeach
+
                     </ul>
                     <div class="card-body">
                         <a href="#" class="btn btn-primary btn-lg btn-block">Choose this Plan</a>
