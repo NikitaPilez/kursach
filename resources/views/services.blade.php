@@ -3,60 +3,32 @@
     <div class="section" id="pricing">
         <div class="container">
             <div class="section-title">
-                <small>PRICING</small>
-                <h3>Upgrade to Pro</h3>
+                <h3>Pricing</h3>
             </div>
 
-            <div class="card-deck">
-                <div class="card pricing">
-                    <div class="card-head">
-                        <small class="text-primary">PERSONAL</small>
-                        <span class="price">$14<sub>/m</sub></span>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <div class="list-group-item">10 Projects</div>
-                        <div class="list-group-item">5 GB Storage</div>
-                        <div class="list-group-item">Basic Support</div>
-                        <div class="list-group-item"><del>Collaboration</del></div>
-                        <div class="list-group-item"><del>Reports and analytics</del></div>
-                    </ul>
-                    <div class="card-body">
-                        <a href="#" class="btn btn-primary btn-lg btn-block">Choose this Plan</a>
-                    </div>
-                </div>
-                <div class="card pricing popular">
-                    <div class="card-head">
-                        <small class="text-primary">FOR TEAMS</small>
-                        <span class="price">$29<sub>/m</sub></span>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <div class="list-group-item">Unlimited Projects</div>
-                        <div class="list-group-item">100 GB Storage</div>
-                        <div class="list-group-item">Priority Support</div>
-                        <div class="list-group-item">Collaboration</div>
-                        <div class="list-group-item">Reports and analytics</div>
-                    </ul>
-                    <div class="card-body">
-                        <a href="#" class="btn btn-primary btn-lg btn-block">Choose this Plan</a>
+            <div class="card-deck popular">
+                @foreach($services as $item)
+                <div class="col-md-4">
+                    <div class="card pricing">
+                        <div class="card-head">
+                            <small class="text-primary">{{$item->name}}</small>
+                            <span class="price">{{$item->price}}$</span>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            @foreach($servicesName as $obj)
+                            @if($item->id == $obj->services_id)
+                            <div class="list-group-item">{{$obj->name}}</div>
+                            @endif
+                            @endforeach()
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="btn btn-primary btn-lg btn-block">Order</a>
+                        </div>
                     </div>
                 </div>
-                <div class="card pricing">
-                    <div class="card-head">
-                        <small class="text-primary">ENTERPRISE</small>
-                        <span class="price">$249<sub>/m</sub></span>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <div class="list-group-item">Unlimited Projects</div>
-                        <div class="list-group-item">Unlimited Storage</div>
-                        <div class="list-group-item">Collaboration</div>
-                        <div class="list-group-item">Reports and analytics</div>
-                        <div class="list-group-item">Web hooks</div>
-                    </ul>
-                    <div class="card-body">
-                        <a href="#" class="btn btn-primary btn-lg btn-block">Choose this Plan</a>
-                    </div>
-                </div>
+                @endforeach
             </div>
+        </div>
             <!-- // end .pricing -->
 
 

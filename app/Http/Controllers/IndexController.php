@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Carbon\Carbon;
 use App\Question;
 use App\Setting;
+use App\Services;
+use App\ServiceName;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -20,7 +22,10 @@ class IndexController extends Controller
     public function services(){
         $settings = Setting::where('id','1')->first();
 
-        return view('services',compact('settings'));
+        $services = Services::where('display','show')->get();
+        $servicesName = ServiceName::where('display','show')->get();
+
+        return view('services',compact('settings','services','servicesName'));
     }
 
     public function contacts(){
