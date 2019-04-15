@@ -11,12 +11,12 @@
 |
 */
 
-Route::get('/', 'indexController@index');
-Route::get('/services','indexController@services');
-Route::get('/contacts','indexController@contacts');
-Route::get('/gallery' ,'indexController@gallery');
-Route::get('/questions' , 'indexController@questions');
-Route::post('sendQuestion','indexController@sendQuestion');
+Route::get('/', 'IndexController@index');
+Route::get('/services','IndexController@services');
+Route::get('/contacts','IndexController@contacts');
+Route::get('/gallery' ,'IndexController@gallery');
+Route::get('/questions' , 'IndexController@questions');
+Route::post('sendQuestion','IndexController@sendQuestion');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
