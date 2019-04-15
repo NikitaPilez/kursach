@@ -1,21 +1,24 @@
 @extends('base')
 @section('content')
         <div class="container">
-            <div class="section-title">
-                <small>FAQ</small>
+            <div class="section-title" style="margin-top: 30px">
                 <h3>Frequently Asked Questions</h3>
             </div>
 
             <div class="row pt-4">
                  @foreach($questions as $item)
                 <div class="col-md-6">
-                    <h4 class="mb-3">{{$item->question}}</h4>
-                    <p class="light-font mb-5">{{$item->answer}} </p>
-                    <p class="light-font mb-5">{{$item->date}} </p>
+                    <h3 class="mb-3">{{$item->question}}</h3>
+                    <h4 class="light-font mb-5 color-default">{{$item->answer}} </h4>
+                    <h4 class="light-font mb-5 color-default">{{$item->date}} </p>
                 </div> 
                  @endforeach
             </div>
-            <a data-toggle="modal" data-target="#modalQuestion">Вызвать модальное окно</a>
+            <div class="card-body">
+                <div class="col-md-12">
+                     <a href="#" data-toggle="modal" data-target="#modalQuestion" class="btn btn-primary btn-lg btn-block">Задать вопрос</a>
+                </div>
+            </div>
         </div>
 
            <div class="modal fade" id="modalQuestion" tabindex="-1" role="dialog"
@@ -34,13 +37,17 @@
                         <span class="focus-input100" data-placeholder="Question"></span>
                     </div>
 
-                    <<div class="wrap-input100 validate-input">
+                    <div class="wrap-input100 validate-input">
                         <span class="btn-show-pass">
                             <i class="zmdi zmdi-eye"></i>
                         </span>
                         <input class="input100" type="text" name="comment">
                         <span class="focus-input100" data-placeholder="Comment"></span>
-                    </div> 
+                    </div>
+
+                    <div class="center">
+                        <h5></h5>
+                    </div>
 
                     <div class="container-login100-form-btn">
                         <div class="wrap-login100-form-btn">

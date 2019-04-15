@@ -7,6 +7,7 @@ use App\Question;
 use App\Setting;
 use App\Services;
 use App\ServiceName;
+use App\Information;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -14,8 +15,9 @@ class IndexController extends Controller
     public function index(){
 
     	$settings = Setting::where('id','1')->first();
+    	$info = Information::where('display','show')->get();
 
-    	return view('welcome',compact('settings'));
+    	return view('welcome',compact('settings','info'));
     }
 
 
