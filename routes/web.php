@@ -20,3 +20,13 @@ Route::post('sendQuestion','IndexController@sendQuestion');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+/*
+
+1. Load data.
+2. Gallery
+3. Photo in service + page service or modal service.
+action="{{asset('/sendQuestion')}}"
+
+*/

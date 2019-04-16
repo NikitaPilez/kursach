@@ -12,43 +12,56 @@ use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
-    public function index(){
-    	$settings = Setting::where('id','1')->first();
-    	$info = Information::where('display','show')->get();
 
-    	return view('welcome',compact('settings','info'));
+    protected $settings;
+
+    public function __construct()
+    {
+        $this->settings = Setting::where('id','1')->first();
+    }
+
+    public function index(){
+    	$settings = $this->settings;
+    	$info = Information::where('display','show')->get();
+        $namePage = 'welcome';
+
+    	return view('welcome',compact('settings','info','namePage'));
     }
 
 
     public function services($id = null){
         
-        $settings = Setting::where('id','1')->first();
+        $settings = $this->settings;
 
         $services = Services::where('display','show')->get();
         $servicesName = ServiceName::where('display','show')->get();
+        $namePage = 'services';
 
-        return view('services',compact('settings','services','servicesName'));
+        return view('services',compact('settings','services','servicesName','namePage'));
     }
 
     public function contacts(){
 
-    	$settings = Setting::where('id','1')->first();
+    	$settings = $this->settings;
+        $namePage = 'contacts';
 
-    	return view('contacts',compact('settings'));
+    	return view('contacts',compact('settings','namePage'));
     }
 
     public function questions(){
-    	$settings = Setting::where('id','1')->first();
+    	$settings = $this->settings;
 
         $questions = Question::where('display','show')->get();
+        $namePage = 'questions';
 
-    	return view('questions',compact('questions', 'settings'));
+    	return view('questions',compact('questions', 'settings','namePage'));
     }
 
     public function gallery(){
-        $settings = Setting::where('id','1')->first();
+        $settings = $this->settings;
+        $namePage = 'gallery';
 
-    	return view('gallery',compact('settings'));
+    	return view('gallery',compact('settings','namePage'));
     }
 
     public function sendQuestion(Request $request){ 

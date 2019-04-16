@@ -26,7 +26,7 @@
     <div class="modal-dialog " role="document">
         <div class="modal-content">
             <div class="wrap-login100">
-                <form class="login100-form validate-form" method="POST" action="{{asset('/sendQuestion')}}">
+                <form class="login100-form validate-form" id="my-form" method="POST" action="{{asset('/sendQuestion')}}">
                     {{csrf_field()}}
                     <span class="login100-form-title p-b-26">
                         Задайте свой вопрос
@@ -52,9 +52,9 @@
                     <div class="container-login100-form-btn">
                         <div class="wrap-login100-form-btn">
                             <div class="login100-form-bgbtn"></div>
-                            <input id="sendQuestion" class="login100-form-btn">
+                            <a id="sendQuestion" class="login100-form-btn" style="cursor:pointer;">
                                 Отправить
-                            </input>
+                            </a>
                         </div>
                     </div>
                 </form>
