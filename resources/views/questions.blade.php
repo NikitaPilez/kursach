@@ -33,7 +33,7 @@
                     </span>
 
                     <div class="wrap-input100 validate-input">
-                        <input class="input100" type="text" name="question">
+                        <input class="input100" type="text" id="question" name="question">
                         <span class="focus-input100" data-placeholder="Question"></span>
                     </div>
 
@@ -41,20 +41,20 @@
                         <span class="btn-show-pass">
                             <i class="zmdi zmdi-eye"></i>
                         </span>
-                        <input class="input100" type="text" name="comment">
+                        <input class="input100" type="text" id="comment" name="comment">
                         <span class="focus-input100" data-placeholder="Comment"></span>
                     </div>
 
                     <div class="center">
-                        <h5></h5>
+                        <h5 id="error"></h5>
                     </div>
 
                     <div class="container-login100-form-btn">
                         <div class="wrap-login100-form-btn">
                             <div class="login100-form-bgbtn"></div>
-                            <button class="login100-form-btn">
+                            <input id="sendQuestion" class="login100-form-btn">
                                 Отправить
-                            </button>
+                            </input>
                         </div>
                     </div>
                 </form>

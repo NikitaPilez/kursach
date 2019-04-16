@@ -13,7 +13,6 @@ use Illuminate\Http\Request;
 class IndexController extends Controller
 {
     public function index(){
-
     	$settings = Setting::where('id','1')->first();
     	$info = Information::where('display','show')->get();
 
@@ -21,7 +20,8 @@ class IndexController extends Controller
     }
 
 
-    public function services(){
+    public function services($id = null){
+        
         $settings = Setting::where('id','1')->first();
 
         $services = Services::where('display','show')->get();

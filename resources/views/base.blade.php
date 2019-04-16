@@ -48,10 +48,10 @@ URI     : https://colorlib.com
                         <a class="navbar-brand" href="{{asset('/')}}"><img src="images/logo.png" class="img-fluid" alt="logo"></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
                         <div class="collapse navbar-collapse" id="navbar">
                             <ul class="navbar-nav ml-auto">
-                                <li class="nav-item"> <a class="nav-link active" href="{{asset('gallery')}}">ГАЛЕРЕЯ <span class="sr-only">(current)</span></a> </li>
-                                <li class="nav-item"> <a class="nav-link" href="{{asset('services')}}">УСЛУГИ</a> </li>
-                                <li class="nav-item"> <a class="nav-link" href="{{asset('questions')}}">ВОПРОСЫ</a> </li>
-                                <li class="nav-item"> <a class="nav-link" href="{{asset('contacts')}}">КОНТАКТЫ</a> </li>
+                                <li class="nav-item"> <a class="nav-link active" role="navigation" href="{{asset('gallery')}}">ГАЛЕРЕЯ <span class="sr-only">(current)</span></a> </li>
+                                <li class="nav-item"> <a class="nav-link" role="navigation"   href="{{asset('services')}}">УСЛУГИ</a> </li>
+                                <li class="nav-item"> <a class="nav-link"  role="navigation" href="{{asset('questions')}}">ВОПРОСЫ</a> </li>
+                                <li class="nav-item"> <a class="nav-link"role="navigation" href="{{asset('contacts')}}">КОНТАКТЫ</a> </li>
                             </ul>
                         </div>
                     </nav>
@@ -70,7 +70,7 @@ URI     : https://colorlib.com
     </header>
 
 
-    @yield('content')
+    @yield('content') 
 
     <footer class="my-5 text-center">
         <p class="mb-2"><small>{{$settings->copyright}} <a href="https://colorlib.com">COLORLIB</a></small></p>
@@ -95,8 +95,14 @@ URI     : https://colorlib.com
     <script src="js/script.js"></script>
 
     <script type="text/javascript">
-        $('#test').click(function(){
-            console.log('dfdddfdfdf');
+        $('#sendQuestion').click(function(){
+           if ($('#comment').val() == '') {
+                $('#error').text('Введите комментарий к вопросу');
+                 console.log('dfdfd');
+            }
+            
+            
+
         });
     </script>
 
