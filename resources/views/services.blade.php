@@ -21,7 +21,7 @@
                         </ul>
 
                         <div class="card-body">
-                            <a href="#" class="btn btn-primary btn-lg btn-block">Order</a>
+                            <a href="#" data-toggle="modal" data-target="#modalServices" class="btn btn-primary btn-lg btn-block">Заказать услугу</a>
                         </div>
                     </div>
                 </div>
@@ -31,7 +31,60 @@
             <!-- // end .pricing -->
 
 
+
+           <div class="modal fade" id="modalServices" tabindex="-1" role="dialog"
+     aria-hidden="true">
+    <div class="modal-dialog " role="document">
+        <div class="modal-content">
+            <div class="wrap-login100">
+                <form class="login100-form validate-form" id="my-form" method="POST" action="{{asset('/sendServices')}}">
+                    {{csrf_field()}}
+                    <span class="login100-form-title p-b-26">
+                        Введите данные интересующей услуги и телефон для связи
+                    </span>
+
+                    <div class="wrap-input100 validate-input">
+                        
+                        <span class="login100-form-title p-b-26" data-placeholder="Название услуги"> Название услуги</span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input">
+                        <span class="btn-show-pass">
+                            <i class="zmdi zmdi-eye"></i>
+                        </span>
+                        
+                        <span class="login100-form-title p-b-26" data-placeholder="Цена"> Цена</span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input">
+                        <span class="btn-show-pass">
+                            <i class="zmdi zmdi-eye"></i>
+                        </span>
+                        <input class="input100" type="text" id="phoneNumber" name="phoneNumber">
+                        <span class="focus-input100" data-placeholder="Телефон"></span>
+                    </div>
+
+
+                    <div class="center">
+                        <h5 id="error"></h5>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <div class="wrap-login100-form-btn">
+                            <div class="login100-form-bgbtn"></div>
+                            <a id="sendServices" class="login100-form-btn" style="cursor:pointer;">
+                                Отправить
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
         </div>
+
+
+
 
     </div>
 @endsection

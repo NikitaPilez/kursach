@@ -14,9 +14,10 @@
 Route::get('/', 'IndexController@index');
 Route::get('/services','IndexController@services');
 Route::get('/contacts','IndexController@contacts');
-Route::get('/gallery' ,'IndexController@gallery');
 Route::get('/questions' , 'IndexController@questions');
+Route::get('/aboutus','IndexController@aboutus');
 Route::post('sendQuestion','IndexController@sendQuestion');
+Route::post('sendServices','IndexController@sendServices');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -24,9 +25,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 /*
 
-1. Load data.
-2. Gallery
-3. Photo in service + page service or modal service.
-action="{{asset('/sendQuestion')}}"
-
+1. На главной должна быть только заставка
+2. Сделать в меню вкладку о нас и туда перенести точто было на главной
+3. сделать модальное окно с заказать услугу и отправку его  ( название услуги , цена ,)
+4. контакты сделаю я
 */

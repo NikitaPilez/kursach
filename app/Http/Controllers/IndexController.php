@@ -22,10 +22,19 @@ class IndexController extends Controller
 
     public function index(){
     	$settings = $this->settings;
-    	$info = Information::where('display','show')->get();
+        $info = Information::where('display','show')->get();
         $namePage = 'welcome';
 
     	return view('welcome',compact('settings','info','namePage'));
+    }
+
+    public function aboutus(){
+
+        $settings = $this->settings;
+        $aboutus = Information::where('display','show')->get();
+        $namePage = 'aboutus';
+
+        return view('aboutus' , compact('settings', 'aboutus', 'namePage'));
     }
 
 
@@ -57,13 +66,6 @@ class IndexController extends Controller
     	return view('questions',compact('questions', 'settings','namePage'));
     }
 
-    public function gallery(){
-        $settings = $this->settings;
-        $namePage = 'gallery';
-
-    	return view('gallery',compact('settings','namePage'));
-    }
-
     public function sendQuestion(Request $request){ 
 
     	$question = new Question;
@@ -78,6 +80,9 @@ class IndexController extends Controller
         return redirect('questions');
     }
 
+    public function sendServices(Request $request){
+        
+    }
 
 
 }

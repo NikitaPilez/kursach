@@ -48,10 +48,11 @@ URI     : https://colorlib.com
                         <a class="navbar-brand <?php if($namePage == 'welcome') echo 'active'; ?>" href="{{asset('/')}}"><img src="images/logo.png" class="img-fluid" alt="logo"></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
                         <div class="collapse navbar-collapse" id="navbar">
                             <ul class="navbar-nav ml-auto">
-                                <li class="nav-item"> <a class="nav-link <?php if($namePage == 'gallery') echo 'active'; ?>" href="{{asset('gallery')}}">ГАЛЕРЕЯ <span class="sr-only">(current)</span></a> </li>
+        
                                 <li class="nav-item"> <a class="nav-link <?php if($namePage == 'services') echo 'active'; ?>" href="{{asset('services')}}">УСЛУГИ</a> </li>
                                 <li class="nav-item"> <a class="nav-link <?php if($namePage == 'questions') echo 'active'; ?>" href="{{asset('questions')}}">ВОПРОСЫ</a> </li>
                                 <li class="nav-item"> <a class="nav-link <?php if($namePage == 'contacts') echo 'active'; ?>" href="{{asset('contacts')}}">КОНТАКТЫ</a> </li>
+                                <li class="nav-item"> <a class="nav-link <?php if($namePage == 'aboutus') echo 'active'; ?>" href="{{asset('aboutus')}}">О НАС</a> </li>
                             </ul>
                         </div>
                     </nav>
