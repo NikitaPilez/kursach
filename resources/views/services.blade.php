@@ -21,7 +21,7 @@
                         </ul>
 
                         <div class="card-body">
-                            <a href="#" data-toggle="modal" data-target="#modalServices" class="btn btn-primary btn-lg btn-block">Заказать услугу</a>
+                            <a href="#" data-toggle="modal" name="{{$item->name}}" data-target="#modalServices" class="btn btn-primary btn-lg btn-block btn-services">Заказать услугу</a>
                         </div>
                     </div>
                 </div>

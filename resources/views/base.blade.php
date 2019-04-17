@@ -95,16 +95,7 @@ URI     : https://colorlib.com
 
     <script src="js/script.js"></script>
 
-    <script type="text/javascript">
-        $('#sendQuestion').click(function(){
-           if ($('#question').val() == '') {
-                $('#error').text('Введите свой вопрос!');
-            }
-            else{
-                $('#my-form').submit();
-            }            
-        });
-    </script>
+    <script src="js/myscript.js"></script>
 
 </body>
 
