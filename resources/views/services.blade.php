@@ -21,7 +21,7 @@
                         </ul>
 
                         <div class="card-body">
-                            <a href="#" data-toggle="modal" name="{{$item->name}}" data-target="#modalServices" class="btn btn-primary btn-lg btn-block btn-services">Заказать услугу</a>
+                            <a href="#" data-toggle="modal" price = "{{$item->price}}" name="{{$item->name}}" data-target="#modalServices" class="btn btn-primary btn-lg btn-block btn-services">Заказать услугу</a>
                         </div>
                     </div>
                 </div>
@@ -42,10 +42,10 @@
                     <span class="login100-form-title p-b-26">
                         Введите данные интересующей услуги и телефон для связи
                     </span>
-
+ 
                     <div class="wrap-input100 validate-input">
                         
-                        <span class="login100-form-title p-b-26" data-placeholder="Название услуги"> Название услуги</span>
+                        <span class="login100-form-title p-b-26" id="{{}}" data-placeholder="Название услуги"></span>
                     </div>
 
                     <div class="wrap-input100 validate-input">
@@ -53,7 +53,7 @@
                             <i class="zmdi zmdi-eye"></i>
                         </span>
                         
-                        <span class="login100-form-title p-b-26" data-placeholder="Цена"> Цена</span>
+                        <span class="login100-form-title p-b-26"  data-placeholder="Цена"> Цена</span>
                     </div>
 
                     <div class="wrap-input100 validate-input">
