@@ -1,11 +1,19 @@
 $('.btn-services').click(function(){
    console.log($(this).attr('name'));
    console.log($(this).attr('price'));
-   var name = $(this).attr('name');
-   console.log($(this).children());
-   var contents = document.getElementById(name);
-   $("span").text($(this));
+   console.log(document.getElementById(servicesName));
+  // var name = $(this).attr('name');
+ // var servicesNameElement = document.getElementById(servicesName);
+   $('#servicesName').text($(this).attr('name'));
+});
 
+$('.btn-services').click(function(){
+   console.log($(this).attr('name'));
+   console.log($(this).attr('price'));
+   console.log(document.getElementById(servicesName));
+  // var name = $(this).attr('name');
+ // var servicesNameElement = document.getElementById(servicesName);
+   $('#servicesPrice').text($(this).attr('price'));
   
   
 });

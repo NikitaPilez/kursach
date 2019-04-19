@@ -40,21 +40,18 @@
                 <form class="login100-form validate-form" id="my-form" method="POST" action="{{asset('/sendServices')}}">
                     {{csrf_field()}}
                     <span class="login100-form-title p-b-26">
-                        Введите данные интересующей услуги и телефон для связи
+                        Введите телефон для связи
                     </span>
  
-                    <div class="wrap-input100 validate-input">
+                    
                         
-                        <span class="login100-form-title p-b-26" id="{{}}" data-placeholder="Название услуги"></span>
-                    </div>
+                        <span class="login100-form-title p-b-26" id="servicesName" data-placeholder="Название услуги"></span>
+                    
 
-                    <div class="wrap-input100 validate-input">
-                        <span class="btn-show-pass">
-                            <i class="zmdi zmdi-eye"></i>
-                        </span>
+                   
                         
-                        <span class="login100-form-title p-b-26"  data-placeholder="Цена"> Цена</span>
-                    </div>
+                        <span class="login100-form-title p-b-26" id="servicesPrice" data-placeholder="Цена"> </span>
+                   
 
                     <div class="wrap-input100 validate-input">
                         <span class="btn-show-pass">
