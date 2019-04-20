@@ -28,6 +28,7 @@
                 @endforeach
             </div>
         </div>
+
             <!-- // end .pricing -->
 
 
@@ -37,20 +38,11 @@
     <div class="modal-dialog " role="document">
         <div class="modal-content">
             <div class="wrap-login100">
-                <form class="login100-form validate-form" id="my-form" method="POST" action="{{asset('/sendServices')}}">
+                <form class="login100-form validate-form" id="orderForm" method="POST" action="{{asset('/sendOrder')}}">
                     {{csrf_field()}}
-                    <span class="login100-form-title p-b-26">
-                        Введите телефон для связи
-                    </span>
- 
+                        <span class="login100-form-title p-b-26" id="servicesName" > </span>
                     
-                        
-                        <span class="login100-form-title p-b-26" id="servicesName" data-placeholder="Название услуги"></span>
-                    
-
-                   
-                        
-                        <span class="login100-form-title p-b-26" id="servicesPrice" data-placeholder="Цена"> </span>
+                        <span class="login100-form-title p-b-26" id="servicesPrice"> </span>
                    
 
                     <div class="wrap-input100 validate-input">
@@ -58,28 +50,28 @@
                             <i class="zmdi zmdi-eye"></i>
                         </span>
                         <input class="input100" type="text" id="phoneNumber" name="phoneNumber">
-                        <span class="focus-input100" data-placeholder="Телефон"></span>
+                        <span class="focus-input100" data-placeholder="Введите мобильный телефон"></span>
                     </div>
 
 
                     <div class="center">
-                        <h5 id="error"></h5>
+                        <h5 id="error_order"></h5>
                     </div>
 
                     <div class="container-login100-form-btn">
                         <div class="wrap-login100-form-btn">
                             <div class="login100-form-bgbtn"></div>
-                            <a id="sendServices" class="login100-form-btn" style="cursor:pointer;">
+                            <a id="sendOrder" class="login100-form-btn" style="cursor:pointer;">
                                 Отправить
                             </a>
                         </div>
                     </div>
                 </form>
             </div>
-
-
         </div>
 
+        </div>
+</div>
 
 
 

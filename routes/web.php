@@ -17,7 +17,7 @@ Route::get('/contacts','IndexController@contacts');
 Route::get('/questions' , 'IndexController@questions');
 Route::get('/aboutus','IndexController@aboutus');
 Route::post('sendQuestion','IndexController@sendQuestion');
-Route::post('sendServices','IndexController@sendServices');
+Route::post('sendOrder','IndexController@sendOrder');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

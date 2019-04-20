@@ -8,6 +8,7 @@ use App\Setting;
 use App\Services;
 use App\ServiceName;
 use App\Information;
+use App\Order;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -80,9 +81,12 @@ class IndexController extends Controller
         return redirect('questions');
     }
 
-    public function sendServices(Request $request){
+    // public function sendOrder(Request $request){
+    //     $order = new Order;
+    //     $order->phone = $request ->phone;
+    //     $order->
         
-    }
+    // }
 
 
 }

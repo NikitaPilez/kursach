@@ -46,7 +46,7 @@
                     </div>
 
                     <div class="center">
-                        <h5 id="error"></h5>
+                        <h5 id="error_question"></h5>
                     </div>
 
                     <div class="container-login100-form-btn">
