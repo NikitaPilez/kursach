@@ -81,12 +81,12 @@ class IndexController extends Controller
         return redirect('questions');
     }
 
-    // public function sendOrder(Request $request){
-    //     $order = new Order;
-    //     $order->phone = $request ->phone;
-    //     $order->
-        
-    // }
+    public function sendOrder(Request $request){
+        // $order = new Order;
+        // $order->phone = $request ->phone;
+        // $order->
+            
+    }
 
 
 }

@@ -15,10 +15,25 @@ $('#sendQuestion').click(function(){
 });
 
 $('#sendOrder').click(function(){
+	
 	if($('#phoneNumber').val() == '') {
 		$('#error_order').text('Введите мобильный телефон');
 	}
 	else{
-		$('#orderForm').submit();
+		$.ajax({ 
+			type:'POST',
+			url:"/sendOrder", 
+			data: "id=" + "dfdf", 
+			beforeSend:function(){ 
+
+			}, 
+			success:function(data){ 
+			
+			}, 
+			error:function(xhr){ 
+				console.log('error');
+			} 
+		});
 	}
 });
+
