@@ -21,7 +21,7 @@
                         </ul>
 
                         <div class="card-body">
-                            <a href="#" data-toggle="modal" price = "{{$item->price}}" name="{{$item->name}}" data-target="#modalServices" class="btn btn-primary btn-lg btn-block btn-services">Заказать услугу</a>
+                            <a href="#" data-toggle="modal" services_id="{{$item->id}}" price = "{{$item->price}}" name="{{$item->name}}" data-target="#modalServices" class="btn btn-primary btn-lg btn-block btn-services">Заказать услугу</a>
                         </div>
                     </div>
                 </div>
@@ -49,13 +49,20 @@
                         <span class="btn-show-pass">
                             <i class="zmdi zmdi-eye"></i>
                         </span>
-                        <input class="input100" type="text" id="phoneNumber" name="phoneNumber">
-                        <span class="focus-input100" data-placeholder="Введите мобильный телефон"></span>
+                        <input class="input100" type="text" id="phoneNumber" placeholder="Введите мобильный телефон" name="phoneNumber">
+                      <!--   <span class="focus-input100" data-placeholder="Введите мобильный телефон"></span> -->
+                    </div>
+
+                    <div class="wrap-input100 validate-input">
+                        <span class="btn-show-pass">
+                            <i class="zmdi zmdi-eye"></i>
+                        </span>
+                        <input class="input100" placeholder="" type="date" id="phoneNumber" name="date">
                     </div>
 
 
                     <div class="center">
-                        <h5 id="error_order"></h5>
+                        <small><h5 id="error_order"></h5></small>
                     </div>
 
                     <div class="container-login100-form-btn">

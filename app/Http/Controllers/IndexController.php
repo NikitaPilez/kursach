@@ -82,10 +82,14 @@ class IndexController extends Controller
     }
 
     public function sendOrder(Request $request){
-        // $order = new Order;
-        // $order->phone = $request ->phone;
-        // $order->
-            
+        $order = new Order;
+        $order->display = 'hide';
+        $order->status = 'processing';
+        $order->phone = $request->phone;
+        $order->services_id = $request->services_id;
+        $order->date = $request->date;
+        $order->save();
+
     }
 
 
