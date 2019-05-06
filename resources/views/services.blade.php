@@ -68,7 +68,7 @@
                     <div class="container-login100-form-btn">
                         <div class="wrap-login100-form-btn">
                             <div class="login100-form-bgbtn"></div>
-                            <a id="sendOrder" class="login100-form-btn" style="cursor:pointer;">
+                            <a id="sendOrder" class="login100-form-btn" style="cursor:pointer;color:white">
                                 Отправить
                             </a>
                         </div>

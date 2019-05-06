@@ -34,6 +34,8 @@ $('#sendOrder').click(function(){
 			}, 
 			success:function(data){ 
 				$('#error_order').text('Заказ успешно отправлен.');
+				$('#phoneNumber').val('');
+				$('#date').val('');
 			}, 
 			error:function(xhr){ 
 				console.log(xhr);
