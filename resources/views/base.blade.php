@@ -45,14 +45,14 @@ URI     : https://colorlib.com
             <div class="row">
                 <div class="col-md-12">
                     <nav class="navbar navbar-dark navbar-expand-lg">
-                        <a class="navbar-brand <?php if($namePage == 'welcome') echo 'active'; ?>" href="{{asset('/')}}">Главная</a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+                        <a class="navbar-brand <?php if($namePage == 'welcome') echo 'active'; ?>" href="{{asset('/')}}">Home</a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
                         <div class="collapse navbar-collapse" id="navbar">
                             <ul class="navbar-nav ml-auto">
         
-                                <li class="nav-item"> <a class="nav-link <?php if($namePage == 'services') echo 'active'; ?>" href="{{asset('services')}}">УСЛУГИ</a> </li>
-                                <li class="nav-item"> <a class="nav-link <?php if($namePage == 'questions') echo 'active'; ?>" href="{{asset('questions')}}">ВОПРОСЫ</a> </li>
-                                <li class="nav-item"> <a class="nav-link <?php if($namePage == 'contacts') echo 'active'; ?>" href="{{asset('contacts')}}">КОНТАКТЫ</a> </li>
-                                <li class="nav-item"> <a class="nav-link <?php if($namePage == 'aboutus') echo 'active'; ?>" href="{{asset('aboutus')}}">О НАС</a> </li>
+                                <li class="nav-item"> <a class="nav-link <?php if($namePage == 'services') echo 'active'; ?>" href="{{asset('services')}}">Services</a> </li>
+                                <li class="nav-item"> <a class="nav-link <?php if($namePage == 'questions') echo 'active'; ?>" href="{{asset('questions')}}">Questions</a> </li>
+                                <li class="nav-item"> <a class="nav-link <?php if($namePage == 'contacts') echo 'active'; ?>" href="{{asset('contacts')}}">Contacts</a> </li>
+                                <li class="nav-item"> <a class="nav-link <?php if($namePage == 'aboutus') echo 'active'; ?>" href="{{asset('aboutus')}}">About us</a> </li>
                             </ul>
                         </div>
                     </nav>

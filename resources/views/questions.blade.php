@@ -16,7 +16,7 @@
             </div>
             <div class="card-body">
                 <div class="col-md-12">
-                     <a href="#" data-toggle="modal" data-target="#modalQuestion" class="btn btn-primary btn-lg btn-block">Задать вопрос</a>
+                     <a href="#" data-toggle="modal" data-target="#modalQuestion" class="btn btn-primary btn-lg btn-block">Ask question</a>
                 </div>
             </div>
         </div>
@@ -29,7 +29,7 @@
                 <form class="login100-form validate-form" id="my-form" method="POST" action="{{asset('/sendQuestion')}}">
                     {{csrf_field()}}
                     <span class="login100-form-title p-b-26">
-                        Задайте свой вопрос
+                        Ask you question
                     </span>
 
                     <div class="wrap-input100 validate-input">
@@ -53,7 +53,7 @@
                         <div class="wrap-login100-form-btn">
                             <div class="login100-form-bgbtn"></div>
                             <a id="sendQuestion" class="login100-form-btn" style="cursor:pointer;color:white">
-                                Отправить
+                                Send
                             </a>
                         </div>
                     </div>

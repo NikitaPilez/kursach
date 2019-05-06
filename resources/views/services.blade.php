@@ -21,7 +21,7 @@
                         </ul>
 
                         <div class="card-body">
-                            <a href="#" data-toggle="modal" services_id="{{$item->id}}" price = "{{$item->price}}" name="{{$item->name}}" data-target="#modalServices" class="btn btn-primary btn-lg btn-block btn-services">Заказать услугу</a>
+                            <a href="#" data-toggle="modal" services_id="{{$item->id}}" price = "{{$item->price}}" name="{{$item->name}}" data-target="#modalServices" class="btn btn-primary btn-lg btn-block btn-services">Make order</a>
                         </div>
                     </div>
                 </div>
@@ -49,7 +49,7 @@
                         <span class="btn-show-pass">
                             <i class="zmdi zmdi-eye"></i>
                         </span>
-                        <input class="input100" type="text" id="phoneNumber" placeholder="Введите мобильный телефон" name="phoneNumber">
+                        <input class="input100" type="text" id="phoneNumber" placeholder="Enter phone" name="phoneNumber">
                       <!--   <span class="focus-input100" data-placeholder="Введите мобильный телефон"></span> -->
                     </div>
 
@@ -69,7 +69,7 @@
                         <div class="wrap-login100-form-btn">
                             <div class="login100-form-bgbtn"></div>
                             <a id="sendOrder" class="login100-form-btn" style="cursor:pointer;color:white">
-                                Отправить
+                                Send
                             </a>
                         </div>
                     </div>
